@@ -24,7 +24,7 @@ votoBranco = false;
 
 
 //O for logo abaixo vai ficar cumprir seu loop de acordo com a function clicou()
-for(let i=0;i<etapa.numeros;i++) {//i menor que etapa.numeros que no caso são 5 quadradinhos!
+for(let i=0;i<etapa.numeros;i++) {//se i for igual a zero cliques, numeros são 5 quadrados
     if(i === 0) {//Se o primeiro quadradinho não estiver selecionado, vai cumprir a função!
         numeroHTML += '<div class="numero pisca"></div>'
     }else{//caso contrario
