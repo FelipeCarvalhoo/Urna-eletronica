@@ -187,6 +187,7 @@ html, body {
         font-weight:bold;
         margin:20px;
 
+
     }
     .hum div {
         border-bottom: 1px solid black;
@@ -203,5 +204,6 @@ html, body {
         align-items: center;
         height: 200px;
         width:200px;
+        padding:20px;
     }
 }
