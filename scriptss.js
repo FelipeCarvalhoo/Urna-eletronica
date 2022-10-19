@@ -7,6 +7,8 @@ let lateral = document.querySelector('.d-1-right');
 let aviso = document.querySelector('.d-2');
 let maoSoco = document.querySelector('.menu');
 let maoSocoo = document.querySelector('.menuu');
+let alerta = document.querySelector('.alerta');
+
 
 let etapaAtual = 0;
 let numero = '';
@@ -45,7 +47,7 @@ function updateSoco() {
 }
 
 
-function atualizaInterface() {
+const atualizaInterface = () => {
     let etapa = etapas[etapaAtual];//criando novamente etapa, dentro de outra função
     let candidato = etapa.candidatos.filter((item)=>{
         if(item.numero === numero) {//se o numero dentro de etapas for igual ao numero rerna false ou true
@@ -73,7 +75,7 @@ function atualizaInterface() {
 
 }
 
-function clicou(n) {
+const clicou = (n) => {
   let elNumero = document.querySelector('.numero.pisca');
   if(elNumero !== null){
     elNumero.innerHTML = n;
@@ -88,7 +90,7 @@ function clicou(n) {
 }
 console.log(elNumero)
 }
-function branco() {
+const branco = () => {
     if( numero === '' ) { // se o numero for igual a numero = '';
         votoBranco = true;
         seuVotoPara.style.display = 'block';
@@ -97,19 +99,23 @@ function branco() {
         descricao.innerHTML = '<div class="aviso--grande pisca">Voto em branco</div>';
     }
 }
-function corrige() {
+const corrige = () => {
     comecarEtapa();
 }
-function confirma() {
+const confirma = () => {
     alert('Clicou em confirma')
 }
-function menu() {
+const menu = () => {
     maoSoco.style.display = 'flex';
     maoSocoo.style.display = 'flex';
 
 }
-function fechaMenuu() {
+const fechaMenuu = () => {
     updateSoco();
 }
 
 comecarEtapa();
+
+if(scroll.alerta <= "800px"){
+    alert("este site não esta disponivel para essa versão")
+}
